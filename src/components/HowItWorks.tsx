@@ -41,7 +41,7 @@ const HowItWorks = () => {
           <span>A monster for gaming</span>
         </div>
         <span className="text-gray-500 text-2xl">
-          It's here. The biggest redesign in the history of Apple GPUs.
+          It&apos;s here. The biggest redesign in the history of Apple GPUs.
         </span>
       </div>
 
