@@ -10,9 +10,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Features = () => {
-  const videoRef = useRef();
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useGSAP(() => {
+    // Animate video when in view and auto-play
     gsap.fromTo(
       "#exploreVideo",
       { opacity: 0, y: 50 },
@@ -32,17 +33,21 @@ const Features = () => {
       }
     );
 
+    // Animate section title
     animateWithGsap("#features_title", { y: 0, opacity: 1 });
 
+    // Animate images with scale
     animateWithGsap(
       ".g_grow",
       { scale: 1, opacity: 1, ease: "power1" },
       { scrub: 5.5 }
     );
 
+    // Animate text blocks
     gsap.utils.toArray(".g_text").forEach((el) => {
+      const target = el as HTMLElement;
       gsap.fromTo(
-        el,
+        target,
         { opacity: 0, y: 40 },
         {
           opacity: 1,
@@ -50,7 +55,7 @@ const Features = () => {
           duration: 1,
           ease: "power2.out",
           scrollTrigger: {
-            trigger: el,
+            trigger: target,
             start: "top 90%",
             toggleActions: "play none none reverse",
           },
@@ -98,28 +103,27 @@ const Features = () => {
                     src={explore1Img}
                     alt=""
                     className="feature-video g_grow"
-                  ></Image>
+                  />
                 </div>
                 <div className="overflow-hidden flex-1 h-[50vh]">
                   <Image
                     src={explore2Img}
                     alt=""
                     className="feature-video g_grow"
-                  ></Image>
+                  />
                 </div>
               </div>
+
               <div className="feature-text-container min-h-[300px] mt-10 space-y-10 text-gray-300">
                 <div className="flex-1 flex-center">
                   <p className="feature-text g_text">
-                    iPhone 15 Pro is {""}
+                    iPhone 15 Pro is{" "}
                     <span className="text-white">
                       the first iPhone to feature an aerospace-grade titanium
                       design
                     </span>
-                    <span>
-                      , using the same alloy that spacecraft use for missions to
-                      Mars.
-                    </span>
+                    , using the same alloy that spacecraft use for missions to
+                    Mars.
                   </p>
                 </div>
                 <div className="flex-1 flex-center">
