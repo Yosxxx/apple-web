@@ -1,6 +1,4 @@
 import "./globals.css";
-import "swiper/css";
-import "swiper/css/navigation";
 
 export const metadata = {
   title: "Apple Website",
