@@ -27,6 +27,25 @@ canvas {
   max-width: 1120px;
 }
 
+.mySwiper .swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.mySwiper .swiper-pagination-bullet-active {
+  background-color: #fff !important;
+}
+
+.mySwiper .swiper-pagination {
+  width: auto !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  bottom: -45px !important;
+  top: auto !important;
+  display: flex !important;
+  gap: 8px;
+  justify-content: center;
+}
+
 @layer utilities {
   .btn {
     @apply px-5 py-2 rounded-3xl my-5;

@@ -4,11 +4,11 @@ import { navLists } from "@/constants";
 
 const Navbar = () => {
   return (
-    <header className="py-10">
+    <header className="py-5">
       <nav className="flex screen-max-width max-sm:justify-between max-sm:px-5">
         <Image alt="" src={appleImg} height={18} width={14} />
 
-        <div className="flex flex-1 justify-center  max-sm:hidden text-gray-500">
+        <div className="flex flex-1 justify-center  max-sm:hidden text-gray-400">
           {navLists.map((navItem) => (
             <div key={navItem} className="px-5 hover:text-white">
               {navItem}

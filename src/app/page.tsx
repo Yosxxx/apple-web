@@ -1,13 +1,15 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import Highlights from "@/components/Highlights";
+import HighLights from "@/components/HighLights";
+import Features from "@/components/Features";
 
 const App = () => {
   return (
     <main>
       <Navbar></Navbar>
       <Hero></Hero>
-      <Highlights></Highlights>
+      <HighLights></HighLights>
+      <Features></Features>
     </main>
   );
 };
