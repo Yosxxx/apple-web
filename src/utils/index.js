@@ -1,4 +1,3 @@
-// Images - import is OK!
 import hero from "../../public/assets/images/hero.jpeg";
 import apple from "../../public/assets/images/apple.svg";
 import search from "../../public/assets/images/search.svg";
@@ -35,12 +34,8 @@ export const explore2Img = explore2;
 export const chipImg = chip;
 export const frameImg = frame;
 
-// Videos - USE PATH STRING, DO NOT IMPORT
+// Videos
 export const heroVideo = "/assets/videos/hero.mp4";
 export const smallHeroVideo = "/assets/videos/smallHero.mp4";
-export const highlightFirstVideo = "/assets/videos/highlight-first.mp4";
-export const highlightSecondVideo = "/assets/videos/hightlight-third.mp4";
-export const highlightThirdVideo = "/assets/videos/hightlight-sec.mp4";
-export const highlightFourthVideo = "/assets/videos/hightlight-fourth.mp4";
 export const exploreVideo = "/assets/videos/explore.mp4";
 export const frameVideo = "/assets/videos/frame.mp4";

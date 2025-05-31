@@ -12,16 +12,24 @@ const Features = () => {
   const videoRef = useRef();
 
   useGSAP(() => {
-    gsap.to("#exploreVideo", {
-      scrollTrigger: {
-        trigger: "#exploreVideo",
-        toggleActions: "play pause reverse restart",
-        start: "-10% bottom",
-      },
-      onComplete: () => {
-        videoRef.current.play();
-      },
-    });
+    gsap.fromTo(
+      "#exploreVideo",
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.2,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: "#exploreVideo",
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+        onStart: () => {
+          videoRef.current?.play();
+        },
+      }
+    );
 
     animateWithGsap("#features_title", { y: 0, opacity: 1 });
 
@@ -51,7 +59,7 @@ const Features = () => {
   }, []);
 
   return (
-    <section className="h-full common-padding bg-zinc relative overflow-hidden">
+    <section className="h-full common-padding bg-[#101010] relative overflow-hidden max-md:p-3">
       <div className="screen-max-width">
         <div className="mb-30 w-full mt-20">
           <h1 id="features_title" className="section-heading">
@@ -71,12 +79,12 @@ const Features = () => {
             <div className="relative h-[50vh] w-full flex items-center">
               <video
                 playsInline
-                id="exploreVideo"
-                className="w-full h-full object-cover object-center"
-                preload="none"
                 muted
-                autoPlay
+                preload="none"
+                loop
                 ref={videoRef}
+                id="exploreVideo"
+                className="w-full h-full object-cover object-center opacity-0"
               >
                 <source src={exploreVideo} type="video/mp4" />
               </video>
@@ -99,7 +107,7 @@ const Features = () => {
                   ></Image>
                 </div>
               </div>
-              <div className="feature-text-container min-h-[300px] mt-10 space-y-10">
+              <div className="feature-text-container min-h-[300px] mt-10 space-y-10 text-gray-300">
                 <div className="flex-1 flex-center">
                   <p className="feature-text g_text">
                     iPhone 15 Pro is {""}
@@ -108,7 +116,7 @@ const Features = () => {
                       design
                     </span>
                     <span>
-                      ,using the same alloy that spacecraft use for missions to
+                      , using the same alloy that spacecraft use for missions to
                       Mars.
                     </span>
                   </p>
@@ -119,7 +127,7 @@ const Features = () => {
                     any metal, making these our{" "}
                     <span className="text-white">
                       lightest Pro models ever.
-                    </span>
+                    </span>{" "}
                     You'll notice the difference the moment you pick one up.
                   </p>
                 </div>

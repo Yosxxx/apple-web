@@ -3,7 +3,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 export const metadata = {
-  title: "My App",
+  title: "Apple Website",
   description: "This is my Next.js app.",
 };
 
@@ -14,6 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head></head>
       <body>{children}</body>
     </html>
   );
