@@ -17,7 +17,10 @@ const Navbar = () => {
 
         <div className="flex flex-1 justify-center max-sm:hidden text-gray-400">
           {navLists.map((navItem) => (
-            <div key={navItem} className="px-5 hover:text-white">
+            <div
+              key={navItem}
+              className="px-5 text-gray-400 hover:text-white transition-colors duration-300 ease-in-out"
+            >
               {navItem}
             </div>
           ))}

@@ -22,18 +22,12 @@ const images = [
   "/assets/images/carousel-5.jpg",
   "/assets/images/carousel-6.jpg",
   "/assets/images/carousel-7.jpg",
-  "/assets/images/carousel-8.jpg",
 ];
 
 const captions = [
   {
     title: "Photos & Videos",
     subtitle: "As stunning as your imagination.",
-    textColor: "text-white",
-  },
-  {
-    title: "Chip & Battery Power",
-    subtitle: "Speed that lasts all day.",
     textColor: "text-white",
   },
   {
@@ -49,7 +43,7 @@ const captions = [
   {
     title: "Environment",
     subtitle: "Recycle. Reuse. Repeat.",
-    textColor: "text-black",
+    textColor: "text-white",
   },
   {
     title: "Privacy",
