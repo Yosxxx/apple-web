@@ -14,7 +14,8 @@ pnpm dev
 bun dev
 ```
 
-## Learn More
+## DISCLAIMER
 
 Credit goes to: Codesistency 
+
 Youtube Video: https://www.youtube.com/watch?v=vUYopHWOURg&t=6082s
