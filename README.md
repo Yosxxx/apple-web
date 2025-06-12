@@ -16,6 +16,6 @@ bun dev
 
 ## DISCLAIMER
 
-Credit goes to: Codesistency 
+Credit goes to: JavaScript Mastery 
 
-Youtube Video: https://www.youtube.com/watch?v=vUYopHWOURg&t=6082s
+Youtube Video: https://www.youtube.com/watch?v=kRQbRAJ4-Fs
